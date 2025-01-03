@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}   
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Buttons */
+
+a.play{
+    border-radius: 100px;
+    position: fixed;
+    bottom: 10vh;   /* Move up  */
+    right: 42vw;   /* Move left   */
+    width: 250px;
+    height: 100px;
+    background-color: grey;
+    border-color: white;
+    line-height: 90px;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    text-decoration: none;
+    color: black;
+}
+
+.play:active {
+    transform: scale(0.98);
+}
+
+a.play:hover{
+    background-color: white;
+    opacity: .9;
+}
+
+a.logout{
+  position: fixed;
+  border-radius: 5px; 
+  top: 0vh;   /* Move up  */
+  right: 0px;   /* Move right   */
+  width: 125px;
+  background-color: grey;
+  line-height: 75px;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  text-decoration: none;
+  color: black; 
+  cursor: pointer; 
+  font-weight: bold;
+  
+}
+
+.logout:active {
+    transform: scale(0.98);
+}
+
+a.logout:hover{
+      opacity: .9;
+      background-color: rgb(125, 120, 120);
+      border-width: 3px;
+}
+
+a.login{
+    position: fixed;
+    top: 0vh;   /* Move up  */
+    right: 123px;   /* Move left   */
+    width: 125px;
+    background-color: grey;
+    line-height: 75px;
+    text-align: center;
+    
+    border-style: solid;
+    border-width: 2px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px; 
+    font-weight: bold;
+}
+
+.login:active {
+    transform: scale(0.98);
+}
+
+a.login:hover{
+    opacity: .9;
+    background-color: rgb(125, 120, 120);
+    border-width: 3px;
+}
+
+a.signup{
+    position: fixed;
+    top: 0vh;   /* Move up  */
+    right: 246px;   /* Move right   */
+    width: 125px;
+    background-color: grey;
+    line-height: 75px;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    text-decoration: none;
+    color: black; 
+    font-weight: bold;
+    border-radius: 5px 5px 5px 25px; /* Top-left, Top-right, Bottom-right, Bottom-left*/
+
+    
+}
+  
+a.signup:hover{
+    opacity: .9;
+    background-color: rgb(125, 120, 120);
+    border-width: 3px;
+}
+
+.signup:active {
+    transform: scale(0.98);
+}
+
+.option1{
+    
+    position: fixed;
+    bottom: 5vh;   /* Move up  */
+    left: 300px; /* Horizontal positioning */
+    width: 175px;
+    height: 75px;
+    border-radius: 50px;
+    background-color: white;
+    display: flex; /* Use flexbox for easy centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    border: 2px solid black; /* Combine border styling */
+    text-align: center; /* Ensure multiline text aligns center */
+    text-decoration: none; /* Remove any default underlines */
+    color: black;
+    white-space: normal; /* Allow multiline text */
+    padding: 10px; /* Optional: Add some padding */
+    overflow-wrap: break-word; /* Ensure long words break properly */
+    box-sizing: border-box;
+}
+
+.option2{
+    position: fixed;
+    bottom: 5vh;   /* Move up  */
+    left: 650px; /* Move right  */
+    width: 175px;
+    height: 75px;
+    border-radius: 50px;
+    background-color: white;
+    display: flex; /* Use flexbox for easy centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    border: 2px solid black; /* Combine border styling */
+    text-align: center; /* Ensure multiline text aligns center */
+    text-decoration: none; /* Remove any default underlines */
+    color: black;
+    white-space: normal; /* Allow multiline text */
+    padding: 10px; /* Optional: Add some padding */
+    overflow-wrap: break-word; /* Ensure long words break properly */
+    box-sizing: border-box;
+}
+
+a.option1_1{
+    position: fixed;
+    bottom: 5vh;   /* Move up  */
+    left: 400px; /* Move right  */
+    width: 175px;
+    height: 75px;
+    border-radius: 50px;
+    background-color: white;
+    display: flex; /* Use flexbox for easy centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    border: 2px solid black; /* Combine border styling */
+    text-align: center; /* Ensure multiline text aligns center */
+    text-decoration: none; /* Remove any default underlines */
+    color: black;
+    white-space: normal; /* Allow multiline text */
+    padding: 10px; /* Optional: Add some padding */
+    overflow-wrap: break-word; /* Ensure long words break properly */
+    box-sizing: border-box;
+}
+
+a.option2_1{
+    position: fixed;
+    bottom: 5vh;   /* Move up  */
+    left: 900px; /* Move right  */
+    width: 175px;
+    height: 75px;
+    border-radius: 50px;
+    background-color: white;
+    display: flex; /* Use flexbox for easy centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    border: 2px solid black; /* Combine border styling */
+    text-align: center; /* Ensure multiline text aligns center */
+    text-decoration: none; /* Remove any default underlines */
+    color: black;
+    white-space: normal; /* Allow multiline text */
+    padding: 10px; /* Optional: Add some padding */
+    overflow-wrap: break-word; /* Ensure long words break properly */
+    box-sizing: border-box;
+}
+
+.option3{
+    position: fixed;
+    bottom: 5vh;   /* Move up  */
+    left: 1100px;  /* Move right  */
+    transform: translateX(-50%); /* Precisely center the box */
+    width: 175px;
+    height: 75px;
+    border-radius: 50px;
+    background-color: white;
+    display: flex; /* Use flexbox for perfect centering */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    text-align: center; /* For multiline text alignment */
+    border-style: solid;
+    border-width: 2px;
+    text-decoration: none;
+    color: black;
+    white-space: normal; /* Allow wrapping of text */
+    padding: 10px; /* Optional: Add inner spacing */
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
+
+    
+}
+
+.option1:hover{
+    opacity: .9;
+    background-color: white;
+    border-width: 3px;
+}
+.option2:hover{
+    opacity: .9;
+    background-color: white;
+    border-width: 3px;
+}
+.option3:hover{
+    opacity: .9;
+    background-color: white;
+    border-width: 3px;
+}
+
+.option1:active {
+    transform: scale(0.98);
+}
+.option2:active {
+    transform: scale(0.98);
+}
+.option3:active {
+    transform: scale(0.98);
+}
+.wrapper{
+    width: 330px;
+    padding: 2rem 1rem;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    /*box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);*/ 
+}
+
+.signup_button{
+    align-items: center;
+    width: 90%;
+    outline: none;
+    border: 1px solid white;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    border-radius: 50px;
+    border-color: black;
+    border-width: 2px;
+    background: rgb(79, 72, 72);
+}
+
+.signup_button:active {
+    transform: scale(0.98);
+}
+
+.login_button{
+    align-items: center;
+    width: 90%;
+    outline: none;
+    border: 1px solid white;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    border-radius: 50px;
+    background: rgb(79, 72, 72);
+    border-color: black;
+    border-width: 2px;
+}
+
+.login_button:active {
+    transform: scale(0.98);
+}
+
+/* Images */
+
+.officer{    
+
+    position: fixed; /* Ensures the background stays fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/website/static/images/officer.png'); /* Replace with actual image path */
+    background-size: contain; /* Ensures the entire image is visible */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repetition */
+}
+
+.image{
+    position: fixed;
+    width: 100%; /* Adjust to the size you need */
+    height: 100vh; /* Adjust as needed */
+    background-size: cover; /* Ensure the image covers the container */
+    background-blend-mode: overlay; /* Combine the gradient and image */
+}
+.letteralley{
+    position: fixed;
+    width: 100%; /* Adjust to the size you need */
+    height: 100vh; /* Adjust as needed */
+    background-size: cover; /* Ensure the image covers the container */
+    background-blend-mode: overlay; /* Combine the gradient and image */
+}
+
+.housemurder{
+    position: fixed;
+    width: 100%; /* Adjust to the size you need */
+    height: 100vh; /* Adjust as needed */
+    background-size: cover; /* Ensure the image covers the container */
+    background-blend-mode: overlay; /* Combine the gradient and image */
+}
+
+/* Text */
+
+
+.title-1{
+    position: fixed;
+    text-align: center;
+    font-size: 30px;
+    bottom: 75vh;
+    margin-left: 44vw; 
+    margin-right: 17vw; 
+    color: white;
+}
+
+.logline{
+    position: fixed; 
+    font-size: 20px;
+    bottom: 55vh; /* Moves up */
+    margin-left: 28vw;
+    margin-right: 30vw; 
+    color: white;
+    text-align: center;
+}
+
+.text-2{
+    position: fixed;
+    color: white;
+    -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
+    -webkit-text-fill-color: black; /* Inner color of the letter */
+    bottom: 75vh;
+    margin-left: 28vw;
+    margin-right: 30vw;
+    font-size: 25px;
+    text-align: center;
+}
+
+.text-4{
+    position: fixed;
+    color: white;
+
+    -webkit-text-stroke: 1px blue; /* Outline thickness and color */
+    -webkit-text-fill-color: white; /* Inner color of the letter */
+    bottom: 50vh;
+    margin-left: 28vw;
+    margin-right: 30vw;
+    font-size: 20px;
+    text-align: center;
+}
+
+form input{
+    align-items: center;
+    width: 90%;
+    outline: none;
+    border: 1px solid white;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    border-radius: 50px;
+    background: rgb(147, 135, 135);
+    border-color: black;
+    border-width: 1px;
+}
+
+.member{
+    margin-top: 15px;
+}

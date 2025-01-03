@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Story </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    <style>
+        .option1_1_1{
+            position: fixed;
+            bottom: 5vh;   /* Move up  */
+            left: 43vw; /* Move right  */
+            width: 175px;
+            height: 75px;
+            border-radius: 50px;
+            background-color: white;
+            display: flex; /* Use flexbox for easy centering */
+            justify-content: center; /* Horizontal centering */
+            align-items: center; /* Vertical centering */
+            border: 2px solid black; /* Combine border styling */
+            text-align: center; /* Ensure multiline text aligns center */
+            text-decoration: none; /* Remove any default underlines */
+            color: black;  
+            white-space: normal; /* Allow multiline text */
+            padding: 10px; /* Optional: Add some padding */
+            overflow-wrap: break-word; /* Ensure long words break properly */
+            box-sizing: border-box;
+        }
+        .text-5{
+      position: fixed;
+      color: white;
+      -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
+      -webkit-text-fill-color: black; /* Inner color of the letter */
+      bottom: 60vh;
+      margin-left: 34.5vw;
+      margin-right: 30vw;
+      font-size: 20px;
+      text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <img class='image' src="{{ url_for('static', filename='images/envelope_table.png') }}" alt="house_letter"> 
+
+    <p class="text-5"> You have found an envelope in the table and decide it is time to report your discoveries to the police station</p>
+
+    <a class="signup" id="signup" href="/signup"> Sign Up </a>
+
+    <a class="login" id="login" href="/login"> Log In </a>
+
+    <a class="option1_1_1" id="option2_1" href="/option2_4"> Report what you have found to the police station</a>
+
+    <a class="logout" id="logout" href="/logout"> Logout </a>
+
+</body>
+</html>

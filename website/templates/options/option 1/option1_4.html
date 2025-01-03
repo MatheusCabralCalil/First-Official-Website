@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Story </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    <style>
+        .text-5{
+            position: fixed;
+            color: white;
+            -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
+            -webkit-text-fill-color: black; /* Inner color of the letter */
+            bottom: 85vh;
+            margin-left: 28vw;
+            margin-right: 30vw;
+            font-size: 20px;
+            text-align: center;
+        }
+        .text-8{
+            position: fixed;
+            color: white;
+            -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
+            -webkit-text-fill-color: black; /* Inner color of the letter */
+            bottom: 65vh;
+            margin-left: 36vw;
+            margin-right: 30vw;
+            font-size: 20px;
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+
+    <img class='image' src="{{ url_for('static', filename='images/openletter.png') }}" alt="openletter"> 
+
+    <p class="text-5">You spend the entire day looking for the correct location 
+        until you finally find a suspicous piece of paper and you decide to open it. It has the following riddle: </p>
+
+    <p class="text-8">A place to rest, where journeys align,<br>
+        I’m the door some fear, yet others find fine.<br>
+        Count past twelve, don’t be superstitious,<br>
+        In this room, the stay is delicious.<br>
+        What am I?
+        </p>
+
+
+
+    <a class="signup" id="signup" href="/signup"> Sign Up </a>
+
+    <a class="login" id="login" href="/login"> Log In </a>
+
+    <a class="option1" id="option1_2" href="/option1_5"> Hotel (Room)</a>
+    <a class="option2" id="option2_2" href="/option2_5"> Apartment (Floor) </a>
+    <a class="option3" id="option2_1" href="/option2_4"> Report what you have found to the police station</a>
+
+    <a class="logout" id="logout" href="/logout"> Logout </a>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!--"copy and pase the base.html, allowing me to override"-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+</head>
+<body>
+<div class="wrapper">
+    <form method="POST"> 
+        <h3 class="signup_title" align="center"> Sign up
+            <style> .signup_title{ font-size: 25px; margin-bottom: 25px;} </style>
+        </h3>
+        <div class="form-group">
+            <label class="email_adress" for="email"> Email Adress</label>
+            <input 
+            type="email" 
+            class="form-control"
+            id='email'
+            name="email" 
+            placeholder="Enter email"
+            />
+        </div>
+    
+        <div class="form-group">
+            <label for="firstName"> First Name</label>
+            <input 
+            type="text" 
+            class="form-control"
+            id='firstName'
+            name="firstName" 
+            placeholder="Enter first name"
+            />
+        </div>
+    
+        <div class="form-group">
+            <label for="password1"> Password</label>
+            <input 
+            type="password" 
+            class="form-control"
+            id='password1'
+            name="password1" 
+            placeholder="Enter password"
+            />
+        </div>
+    
+        <div class="form-group">
+            <label for="password2"> Confirm Password</label>
+            <input 
+            type="password" 
+            class="form-control"
+            id='password2'
+            name="password2" 
+            placeholder="Confirm password"
+            />
+        </div>
+        <div class="member">
+            Already have an account? <a  href="./login">
+                Login Here
+            </a>
+        </div>
+        <br>
+            <button type="submit" class="signup_button"> Sign Up
+                
+            </button>
+    </form>
+
+
+</div>
+
+    
+</body>
+</html>

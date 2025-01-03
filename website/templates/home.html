@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"></link>
+
+    <link rel="stylesheet" href="style.css">
+ 
+    <title>{% block title %}Home{% endblock %}</title>
+
+    
+</head> 
+<body>
+ 
+    <div class="gradient-image"></div>
+   <img class='officer' src="{{ url_for('static', filename='images/officer.png ') }}" alt="officer"> 
+    
+
+    <p class="text-2"> You are assigned to investigate a serial killer case. You have to choose one option below: </p>
+
+<div class="buttons"> 
+      
+    <a class="signup" id="signup" href="/signup"> Sign Up </a>
+
+    <a class="login" id="login" href="/login"> Log In </a>
+
+    <a class="option1" id="option1_1" href="/option1_1"> Mutilated body in alley </a>
+
+    <a class="option2" id="option2_1" href="/option2_1"> Stabbed victim at home </a>
+
+    <a class="option3" id="option3_1" href="/option3_1"> Refuse to investigate </a>
+
+    <a class="logout" id="logout" href="/logout"> Logout </a>
+  
+</div> 
+
+<div class="container">{%block content%}{%endblock  %} </div>
+
+
+</body>
+</html>

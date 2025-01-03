@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Story </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    
+</head>
+<body>
+
+
+    
+    <img class="image" class='letteralley' src="{{ url_for('static', filename='images/letteralley.png') }}" alt="alleyletter"> 
+    
+
+    <p class="text-4"> You investigate the mutilated body in the alley and as a result you find a piece of paper in the scene. 
+        It contains a riddle. What are you going to do with it?
+    </p>
+
+
+
+    <a class="signup" id="signup" href="/signup"> Sign Up </a>
+
+    <a class="login" id="login" href="/login"> Log In </a>
+
+    <a class="option1_1" id="option1_1" href="/option1_2"> Open the Letter </a>
+
+    <a class="option2_1" id="option2_1" href="/option2_4"> Report what you have found back to the police station </a>
+
+    <a class="logout" id="logout" href="/logout"> Logout </a>
+</body>
+</html>

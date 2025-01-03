@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Story </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    <style>
+    .text-5{
+        position: fixed;
+        color: white;
+        -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
+        -webkit-text-fill-color: black; /* Inner color of the letter */
+        bottom: 77vh;
+        margin-left: 28vw;
+        margin-right: 30vw;
+        font-size: 20px;
+        text-align: center;
+          }</style>
+</head>
+<body>
+
+    <img class='image' src="{{ url_for('static', filename='images/entering_police_car.png') }}" alt="entering_police_car"> 
+
+    <p class="text-5">After discovering that there could be something in a sewer, you have 2 options:   </p>
+
+    <a class="signup" id="signup" href="/signup"> Sign Up </a>
+
+    <a class="login" id="login" href="/login"> Log In </a>
+
+    <a class="option1_1" id="option1_1" href="/option3_4"> Look for the correct location </a>
+
+    <a class="option2_1" id="option2_1" href="/option2_4"> Report what you have found to the police station</a>
+
+    <a class="logout" id="logout" href="/logout"> Logout </a>
+
+</body>
+</html>

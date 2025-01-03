@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Log in </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+<div class="wrapper"> 
+    <form method="POST"> 
+        <h3 class="login_title" align="center"> Log In
+            <style> .login_title{ font-size: 25px; margin-bottom: 25px;} </style>
+        </h3>
+        <div class="form-group">
+            <label for="email"> Email Adress</label>
+            <input 
+            type="email" 
+            class="form-control"
+            id='email'
+            name="email" 
+            placeholder="Ender email"
+            />
+        </div>
+    
+        <div class="form-group">
+            <label for="password"> Password</label>
+            <input 
+            type="password" 
+            class="form-control"
+            id='password'
+            name="password" 
+            placeholder="Enter password"
+            />
+        </div>
+        <div class="member-signup">
+            Dont have an account? <a  href="./signup">
+                Sign up here
+            </a>
+        </div>
+        <br>
+            <button type="submit" class="login_button"> Log in </button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Story </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    <style>
+        .text-7{
+          position: fixed;
+          color: white;
+          -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
+          -webkit-text-fill-color: black; /* Inner color of the letter */
+          bottom: 70vh;
+          margin-left: 27vw;
+          margin-right: 30vw;
+          font-size: 20px;
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <img class='image' src="{{ url_for('static', filename='images/house_envenlope.png') }}" alt="house_envenlope"> 
+
+    <p class="text-7">You investigate the house and as a result you find a piece of paper in the scene. 
+        It contains a riddle. What are you going to do with it?</p>
+
+   
+
+    <a class="signup" id="signup" href="/signup"> Sign Up </a>
+
+    <a class="login" id="login" href="/login"> Log In </a>
+
+    <a class="option1_1" id="option1_1" href="/option1_2_1"> Open the Letter </a>
+
+    <a class="option2_1" id="option2_1" href="/option2_4"> Report what you have found back to the police station </a>
+
+    <a class="logout" id="logout" href="/logout"> Logout </a>
+    
+</body>
+</html>

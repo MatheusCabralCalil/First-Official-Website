@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Story </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    <style>
+        .text-5{
+            position: fixed;
+            color: white;
+            -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
+            -webkit-text-fill-color: black; /* Inner color of the letter */
+            bottom: 77vh;
+            margin-left: 28vw;
+            margin-right: 30vw;
+            font-size: 20px;
+            text-align: center;
+              }
+
+        .text-6{
+            position: fixed;
+            color: white;
+            -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
+            -webkit-text-fill-color: black; /* Inner color of the letter */
+            bottom: 40vh;
+            margin-left: 42vw;
+            margin-right: 30vw;
+            font-size: 20px;
+            text-align: center;
+              } 
+    </style>
+</head>
+<body>
+
+    <img class='image' src="{{ url_for('static', filename='images/officer_reallocated.png') }}" alt="officer_fired"> 
+
+
+    <p class="text-5"> The police decide you have done enough for the case and decide to reallocate you to another case </p>
+
+    <p class="text-6"> Thank you for playing! </p>
+
+    <a class="signup" id="signup" href="/signup"> Sign Up </a>
+
+    <a class="login" id="login" href="/login"> Log In </a>
+
+    <a class="logout" id="logout" href="/logout"> Logout </a>
+
+
+</body>
+</html>

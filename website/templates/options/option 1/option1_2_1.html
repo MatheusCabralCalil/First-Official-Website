@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Story </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    <style>
+    .text-5{
+      position: fixed;
+      color: white;
+      -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
+      -webkit-text-fill-color: black; /* Inner color of the letter */
+      bottom: 60vh;
+      margin-left: 34.5vw;
+      margin-right: 30vw;
+      font-size: 20px;
+      text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <img class='image' src="{{ url_for('static', filename='images/openletterhome.png') }}" alt="openletterhome"> 
+    
+    <p class="text-5">
+        I can be a path, a game, or a place to hide, <br>
+        I might help you escape or be narrow and wide.<br>
+        Sometimes I hold shadows, sometimes bright light,<br>
+        In cities, I fit just right.<br>
+        
+        What am I?
+            </p>
+
+    <a class="signup" id="signup" href="/signup"> Sign Up </a>
+
+    <a class="login" id="login" href="/login"> Log In </a>
+
+    <a class="option1" id="option1_2" href="/option1_3"> Alley</a>
+
+    <a class="option2" id="option2_2" href="/option2_3"> Lane </a>
+
+    <a class="option3" id="option3_2" href="/option3_3"> Sewer </a>
+
+    <a class="logout" id="logout" href="/logout"> Logout </a>
+    
+</body>
+</html>

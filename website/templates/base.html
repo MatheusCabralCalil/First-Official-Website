@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+ 
+
+    <title>{% block title %}Home{% endblock %}</title>
+
+</head> 
+
+<body style="background-color:black;">>
+
+
+<!--<h1 class="title-1"></h1> for a challange?</h1> -->
+
+<p class="logline">
+    You are a detective. You will be investigating cases of murder around the city of Rio De Janeiro. Your main goal is to discover 
+    who is the serial killer behind many deaths. One peculiarity the murder has is that he always leaves a riddle behind, leading to 
+    more locations and clues, helping you in finding his identity. 
+</p>
+
+
+<div class="website"> 
+
+    <a class="play" id="play" href="/home"> Play </a>
+
+    <a class="signup" id="signup" href="/signup"> Sign Up </a>
+
+    <a class="login" id="login" href="/login"> Log In </a>
+
+    <a class="logout" id="logout" href="/logout"> Logout </a>
+
+</div> 
+
+<div class="container">{%block content%}{%endblock  %} </div>
+
+
+</body>
+</html>
