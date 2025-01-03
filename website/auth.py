@@ -56,13 +56,14 @@ def sign_up():
         
         if user:
             flash('Email alreay exists', category='error')
-            return render_template("login.html")
+            return redirect(url_for('auth.login'))
+            #return render_template("login.html")
         elif len(email) <4:
             flash('Email must be greater than 3 characters.', category='error')
             #category can be named whatever I want
         elif len(first_name) < 2:
             flash('First name must be greater than 1 characters.', category='error')
-        if   password1 != password2:
+        elif password1 != password2:
             flash('Passwords dont match.', category='error')
         elif len(password1) <7:
             flash('Password is too short. Must be at least 7 characters.', category='error')
@@ -79,6 +80,8 @@ def sign_up():
             return redirect(url_for('views.home'))
         
     return render_template("sign_up.html")
+
+
 
 
 @auth.route('/option1_1')
