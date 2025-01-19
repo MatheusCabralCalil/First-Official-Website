@@ -30,13 +30,37 @@
             font-size: 20px;
             text-align: center;
               } 
+        .background_button{
+            position: fixed;
+            margin-left: 26.5vw;
+            margin-right: 30vw;
+            bottom: 75vh;
+            height: 75px;
+            width: 45vw;
+            color:white;
+            border-radius: 15px;
+}
+        .background_button_1{
+            position: fixed;
+            margin-left: 40.5vw;
+            margin-right: 30vw;
+            bottom: 38vh;
+            height: 52px;
+            width: 15vw;
+            color:white;
+            border-radius: 15px;
+}
+
     </style>
 </head>
 <body>
 
     <img class='image' src="{{ url_for('static', filename='images/officer_reallocated.png') }}" alt="officer_fired"> 
 
+    <button class="background_button"></button>
 
+    <button class="background_button_1"></button>
+    
     <p class="text-5"> The police decide you have done enough for the case and decide to reallocate you to another case </p>
 
     <p class="text-6"> Thank you for playing! </p>

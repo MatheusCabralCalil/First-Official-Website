@@ -10,11 +10,15 @@ from flask_login import login_user, login_required, logout_user, current_user
 
 auth = Blueprint('auth', __name__)
 
+@auth.route('/')
+def home_1():
+    return render_template('base.html')
+
 @auth.route('/logout')
 #makes sure that the user is unable to acess "def lougout" root without being logged in
 def logout():
     logout_user()
-    return redirect(url_for('auth.home'))
+    return redirect(url_for('auth.home_1'))
 
 @auth.route('/home')
 def home():
@@ -45,6 +49,7 @@ def login():
 
 @auth.route('/signup', methods=['GET', 'POST'])
 def sign_up():
+
     if request.method == 'POST':
         email = request.form.get('email')
         first_name = request.form.get('firstName')
@@ -53,32 +58,41 @@ def sign_up():
 
         #check if user already exists
         user = User.query.filter_by(email=email).first()
-        
+
         if user:
-            flash('Email alreay exists', category='error')
-            return redirect(url_for('auth.login'))
-            #return render_template("login.html")
-        elif len(email) <4:
-            flash('Email must be greater than 3 characters.', category='error')
-            #category can be named whatever I want
-        elif len(first_name) < 2:
-            flash('First name must be greater than 1 characters.', category='error')
-        elif password1 != password2:
-            flash('Passwords dont match.', category='error')
-        elif len(password1) <7:
-            flash('Password is too short. Must be at least 7 characters.', category='error')
-        else:
-            #if all conditions are met, adds user to database
-            new_user = User(email=email, first_name = first_name, password=generate_password_hash(password1, method='pbkdf2:sha256'))
-            #adds user to database
-            db.session.add(new_user)
-            #updates databse
-            db.session.commit()
-            login_user(user, remember=True)
-            flash('Account created!', category='success')
-            #Redirects user back to home. 'views.home' is where we are redirecting the user to. Calls the function in views.py
-            return redirect(url_for('views.home'))
+            flash("Email already exists", category="error")
+            return redirect(url_for("auth.sign_up"))
         
+        if len(first_name) < 4:
+            flash("Password is too short.", category="error")
+            return redirect(url_for("auth.sign_up"))
+ 
+        if len(password1) < 4:
+            flash("Password is too short.", category="error")
+            return redirect(url_for("auth.sign_up"))
+
+        if password1 != password2:
+            flash("Passwords don't match.", category="error")
+            return redirect(url_for("auth.sign_up"))
+
+        try:
+            new_user = User(
+                email=email,
+                first_name=first_name,
+                password=generate_password_hash(password1, method="pbkdf2:sha256"),
+            )
+            db.session.add(new_user)
+            db.session.commit()
+            print(f"New user created: {new_user}")
+            login_user(new_user, remember=True)
+            flash("Account created successfully!", category="success")
+            return redirect(url_for("views.home"))
+        except Exception as e:
+            print(f"Error during signup: {e}")
+            flash("An error occurred. Please try again.", category="error")
+            return redirect(url_for("auth.sign_up"))
+        
+       
     return render_template("sign_up.html")
 
 
@@ -90,21 +104,24 @@ def option1_1():
     return render_template('/options/option 1/option1_1.html')
 
 @auth.route('/option1_2')
+@login_required
 def option1_2():
     return render_template('/options/option 1/option1_2.html')
 
 @auth.route('/option1_2_1')
+@login_required
 def option1_2_1():
     return render_template('/options/option 1/option1_2_1.html')
 
 @auth.route('/option1_4_1')
+@login_required
 def option1_4_1():
     return render_template('/options/option 1/option1_4_1.html')
 
 @auth.route('/option1_3')
+@login_required
 def option1_3():
     return render_template('/options/option 1/option1_3.html')
-
 
 @auth.route('/option2_1')
 @login_required
@@ -112,13 +129,14 @@ def option2_1():
     return render_template('/options/option 2/option2_1.html')
 
 @auth.route('/option2_2')
+@login_required
 def option2_2():
     return render_template('/options/option 2/option2_2.html')
 
 @auth.route('/option2_3')
+@login_required
 def option2_3():
     return render_template('/options/option 2/option2_3.html')
-
 
 @auth.route('/option3_1')
 @login_required
@@ -126,33 +144,41 @@ def option3_1():
     return render_template('/options/option 3/option3_1.html')
 
 @auth.route('/option3_2')
+@login_required
 def option3_2():
     return render_template('/options/option 3/option3_2.html')
 
 @auth.route('/option3_3')
+@login_required
 def option3_3():
     return render_template('/options/option 3/option3_3.html')
 
 @auth.route('/option1_4')
+@login_required
 def option1_4():
     return render_template('/options/option 1/option1_4.html')
 
 @auth.route('/option2_4')
+@login_required
 def option2_4():
     return render_template('/options/option 2/option2_4.html')
 
 @auth.route('/option3_4')
+@login_required
 def option3_4():
     return render_template('/options/option 3/option3_4.html')
 
 @auth.route('/option1_5')
+@login_required
 def option1_5():
     return render_template('/options/option 1/option1_5.html')
 
 @auth.route('/option2_5')
+@login_required
 def option2_5():
     return render_template('/options/option 2/option2_5.html')
 
 @auth.route('/option3_5')
+@login_required
 def option3_5():
     return render_template('/options/option 3/option3_5.html')

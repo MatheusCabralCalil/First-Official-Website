@@ -18,11 +18,25 @@
           font-size: 20px;
           text-align: center;
         }
+
+        .background_button{
+          position: fixed;
+          margin-left: 26vw;
+          margin-right: 30vw;
+          bottom: 66vh;
+          height: 100px;
+          width: 45vw;
+          color:white;
+          border-radius: 15px;
+}
     </style>
 </head>
 <body>
 
     <img class='image' src="{{ url_for('static', filename='images/house_envenlope.png') }}" alt="house_envenlope"> 
+
+    <button class="background_button"></button>
+
 
     <p class="text-7">You investigate the house and as a result you find a piece of paper in the scene. 
         It contains a riddle. What are you going to do with it?</p>

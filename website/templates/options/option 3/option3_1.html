@@ -13,7 +13,7 @@
             -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
             -webkit-text-fill-color: black; /* Inner color of the letter */
             bottom: 75vh;
-            margin-left: 37vw;
+            margin-left: 38.5vw;
             margin-right: 30vw;
             font-size: 20px;
             text-align: center;
@@ -23,18 +23,42 @@
             color: white;
             -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
             -webkit-text-fill-color: black; /* Inner color of the letter */
-            bottom: 40vh;
+            bottom: 39.5vh;
             margin-left: 42vw;
             margin-right: 30vw;
             font-size: 20px;
             text-align: center;
               } 
+
+              .background_button{
+    position: fixed;
+    margin-left: 37vw;
+    margin-right: 30vw;
+    bottom: 73vh;
+    height: 55px;
+    width: 22vw;
+    color:white;
+    border-radius: 15px;
+}
+.background_button_1{
+    position: fixed;
+    margin-left: 41vw;
+    margin-right: 30vw;
+    bottom: 38vh;
+    height: 50px;
+    width: 14vw;
+    color:white;
+    border-radius: 15px;
+}
     </style>
 </head>
 <body>
 
     <img class='image' src="{{ url_for('static', filename='images/officer_fired.png') }}" alt="officer_fired"> 
 
+    <button class="background_button"></button>
+
+    <button class="background_button_1"></button>
 
     <p class="text-5"> You end up being fired from your job.</p>
 

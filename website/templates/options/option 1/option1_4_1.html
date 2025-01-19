@@ -12,9 +12,9 @@
             position: fixed;
             color: white;
             -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
-            -webkit-text-fill-color: white; /* Inner color of the letter */
+            -webkit-text-fill-color: black; /* Inner color of the letter */
             bottom: 50vh;
-            margin-left: 37vw;
+            margin-left: 38vw;
             margin-right: 30vw;
             font-size: 20px;
             text-align: center;
@@ -23,19 +23,45 @@
       position: fixed;
       color: white;
       -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
-      -webkit-text-fill-color: white; /* Inner color of the letter */
+      -webkit-text-fill-color: black; /* Inner color of the letter */
       bottom: 70vh;
-      margin-left: 32vw;
+      margin-left: 28.5vw;
       margin-right: 30vw;
       font-size: 20px;
       text-align: center;
         }
+
+     .background_button{
+    position: fixed;
+    margin-left: 28vw;
+    margin-right: 30vw;
+    bottom: 69vh;
+    height: 70px;
+    width: 43vw;
+    color:white;
+    border-radius: 15px;
+}
+.background_button_1{
+    position: fixed;
+    margin-left: 36.5vw;
+    margin-right: 30vw;
+    bottom: 49vh;
+    height: 130px;
+    width: 25vw;
+    color:white;
+    border-radius: 15px;
+}
+
     </style>
 
 </head>
 <body>
 
     <img class='image' src="{{ url_for('static', filename='images/lane_open_envelope.png') }}" alt="letteropen"> 
+
+    <button class="background_button"></button>
+
+    <button class="background_button_1"></button>
 
     <p class="text-8">You spend the entire day looking for the correct location 
         until you finally find a suspicous piece of paper and you decide to open it. It has the following riddle: </p>

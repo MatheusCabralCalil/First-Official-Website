@@ -6,20 +6,41 @@
     <title> Story </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
 
+    <style>
+     .background_button{
+    position: fixed;
+    margin-left: 27vw;
+    margin-right: 30vw;
+    bottom: 53vh;
+    height: 120px;
+    width: 45vw;
+    color:white;
+    border-radius: 15px;
+}
+.text-4{
+    position: fixed;
+    color: white;
+    -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
+    -webkit-text-fill-color: black; /* Inner color of the letter */
+    bottom: 55vh;
+    margin-left: 28vw;
+    margin-right: 30vw;
+    font-size: 25px;
+    text-align: center;
+}
+
+    </style>
     
 </head>
 <body>
 
-
-    
     <img class="image" class='letteralley' src="{{ url_for('static', filename='images/letteralley.png') }}" alt="alleyletter"> 
     
+    <button class="background_button"></button>
 
     <p class="text-4"> You investigate the mutilated body in the alley and as a result you find a piece of paper in the scene. 
         It contains a riddle. What are you going to do with it?
     </p>
-
-
 
     <a class="signup" id="signup" href="/signup"> Sign Up </a>
 

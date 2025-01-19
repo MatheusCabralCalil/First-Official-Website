@@ -13,18 +13,29 @@
       -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
       -webkit-text-fill-color: black; /* Inner color of the letter */
       bottom: 77vh;
-      margin-left: 34.5vw;
+      margin-left: 37vw;
       margin-right: 30vw;
       font-size: 20px;
       text-align: center;
         }
-
+        .background_button{
+    position: fixed;
+    margin-left: 35vw;
+    margin-right: 30vw;
+    bottom: 75vh;
+    height: 145px;
+    width: 30vw;
+    color:white;
+    border-radius: 15px;
+}
     </style>
 </head>
 <body>
 
     <img class='image' src="{{ url_for('static', filename='images/openletter.png') }}" alt="openletter"> 
-    
+
+    <button class="background_button"></button>
+
     <p class="text-5">
         I can be a path or a place to hide, <br>
         I might help you escape or be narrow and wide.<br>

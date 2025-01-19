@@ -10,7 +10,30 @@
  
     <title>{% block title %}Home{% endblock %}</title>
 
-    
+    <style>
+.text-2{
+    position: fixed;
+    color: white;
+    -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
+    -webkit-text-fill-color: black; /* Inner color of the letter */
+    bottom: 80vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    font-size: 20px;
+    text-align: center;
+}
+
+.background_button{
+    position: fixed;
+    margin-left: 29.5vw;
+    margin-right: 30vw;
+    bottom: 78vh;
+    height: 80px;
+    width: 41vw;
+    color:white;
+    border-radius: 15px;
+}
+    </style>
 </head> 
 <body>
  
@@ -18,6 +41,8 @@
    <img class='officer' src="{{ url_for('static', filename='images/officer.png ') }}" alt="officer"> 
     
 
+<button class="background_button"> </button>
+   
     <p class="text-2"> You are assigned to investigate a serial killer case. You have to choose one option below: </p>
 
 <div class="buttons"> 

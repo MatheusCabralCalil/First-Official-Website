@@ -33,16 +33,28 @@
       -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
       -webkit-text-fill-color: black; /* Inner color of the letter */
       bottom: 60vh;
-      margin-left: 34.5vw;
+      margin-left: 30vw;
       margin-right: 30vw;
       font-size: 20px;
       text-align: center;
         }
+        .background_button{
+    position: fixed;
+    margin-left: 29vw;
+    margin-right: 30vw;
+    bottom: 58.5vh;
+    height: 70px;
+    width: 42vw;
+    color:white;
+    border-radius: 15px;
+}
     </style>
 </head>
 <body>
 
     <img class='image' src="{{ url_for('static', filename='images/envelope_table.png') }}" alt="house_letter"> 
+
+    <button class="background_button"></button>
 
     <p class="text-5"> You have found an envelope in the table and decide it is time to report your discoveries to the police station</p>
 

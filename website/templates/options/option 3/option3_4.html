@@ -30,11 +30,37 @@
             font-size: 20px;
             text-align: center;
         }
+
+        .background_button_1{
+    position: fixed;
+    margin-left: 36vw;
+    margin-right: 30vw;
+    bottom: 39vh;
+    height: 135px;
+    width: 25vw;
+    color:white;
+    border-radius: 15px;
+}
+
+.background_button{
+    position: fixed;
+    margin-left: 30.5vw;
+    margin-right: 30vw;
+    bottom: 69vh;
+    height: 90px;
+    width: 40vw;
+    color:white;
+    border-radius: 15px;
+}
     </style>
 </head>
 <body>
 
     <img class='image' src="{{ url_for('static', filename='images/lettersewer.png') }}" alt="lettersewer"> 
+
+    <button class="background_button"></button>
+    <button class="background_button_1"></button>
+
 
     <p class="text-6"> You spend the entire day looking for the correct location, until you find a suspicous envelope and decide to
         open it. You discover the following riddle: </p>
@@ -50,11 +76,13 @@
 
     <a class="login" id="login" href="/login"> Log In </a>
 
+    <a class="logout" id="logout" href="/logout"> Logout </a>
+    
     <a class="option1" id="option1_2" href="/option1_5"> Hotel (Room)</a>
     <a class="option2" id="option2_2" href="/option2_5"> Apartment (Floor) </a>
     <a class="option3" id="option2_1" href="/option2_4"> Report what you have found to the police station</a>
 
-    <a class="logout" id="logout" href="/logout"> Logout </a>
+
 
 </body>
 </html>

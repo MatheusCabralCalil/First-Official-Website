@@ -18,13 +18,45 @@
         font-size: 20px;
         text-align: center;
           }
+        .option1_1_2{
+            position: fixed;
+            bottom: 5vh;   /* Move up  */
+            left: 43vw; /* Horizontal positioning */
+            width: 175px;
+            height: 75px;
+            border-radius: 50px;
+            background-color: white;
+            display: flex; /* Use flexbox for easy centering */
+            justify-content: center; /* Horizontal centering */
+            align-items: center; /* Vertical centering */
+            border: 2px solid black; /* Combine border styling */
+            text-align: center; /* Ensure multiline text aligns center */
+            text-decoration: none; /* Remove any default underlines */
+            color: black;
+            white-space: normal; /* Allow multiline text */
+            padding: 10px; /* Optional: Add some padding */
+            overflow-wrap: break-word; /* Ensure long words break properly */
+            box-sizing: border-box;
+        }
+        .background_button{
+    position: fixed;
+    margin-left: 27.5vw;
+    margin-right: 30vw;
+    bottom: 75vh;
+    height: 75px;
+    width: 43vw;
+    color:white;
+    border-radius: 15px;
+}
     </style>
 </head>
 <body>
 
     <img class="image" class='letteralley' src="{{ url_for('static', filename='images/mansittingbed.png') }}" alt="mansittingbed"> 
 
-    <p class="text-5"> You are finally able to find the killer. You find himwaiting for you in a bed. 
+    <button class="background_button"></button>
+
+    <p class="text-5"> You are finally able to find the killer. You find him waiting for you in a bed. 
         He smiles at you and says he has lot to talk </p>
 
 
@@ -33,9 +65,7 @@
 
     <a class="login" id="login" href="/login"> Log In </a>
 
-    <a class="option1_1" id="option1_1" href="/option1_4"> Take him in custody</a>
-
-    <a class="option2_1" id="option2_1" href="/option2_4"> </a>
+    <a class="option1_1_2" id="option1_1" href="/option2_4"> Take him into custody</a>
 
     <a class="logout" id="logout" href="/logout"> Logout </a>
 

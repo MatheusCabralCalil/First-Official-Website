@@ -37,6 +37,11 @@ a.play{
 a.play:hover{
     background-color: white;
     opacity: .9;
+    border-width: 3px;
+    text-decoration: none;
+    border-color: black;
+    color: black;
+    
 }
 
 a.logout{
@@ -62,9 +67,12 @@ a.logout{
 }
 
 a.logout:hover{
-      opacity: .9;
       background-color: rgb(125, 120, 120);
+      opacity: .9;
       border-width: 3px;
+      text-decoration: none;
+      border-color: black;
+      color: black;
 }
 
 a.login{
@@ -89,9 +97,12 @@ a.login{
 }
 
 a.login:hover{
-    opacity: .9;
     background-color: rgb(125, 120, 120);
+    opacity: .9;
     border-width: 3px;
+    text-decoration: none;
+    border-color: black;
+    color: black;
 }
 
 a.signup{
@@ -113,9 +124,12 @@ a.signup{
 }
   
 a.signup:hover{
-    opacity: .9;
     background-color: rgb(125, 120, 120);
+    opacity: .9;
     border-width: 3px;
+    text-decoration: none;
+    border-color: black;
+    color: black;
 }
 
 .signup:active {
@@ -123,10 +137,9 @@ a.signup:hover{
 }
 
 .option1{
-    
     position: fixed;
     bottom: 5vh;   /* Move up  */
-    left: 300px; /* Horizontal positioning */
+    left: 250px; /* Horizontal positioning */
     width: 175px;
     height: 75px;
     border-radius: 50px;
@@ -147,7 +160,7 @@ a.signup:hover{
 .option2{
     position: fixed;
     bottom: 5vh;   /* Move up  */
-    left: 650px; /* Move right  */
+    left: 750px; /* Move right  */
     width: 175px;
     height: 75px;
     border-radius: 50px;
@@ -189,7 +202,7 @@ a.option1_1{
 a.option2_1{
     position: fixed;
     bottom: 5vh;   /* Move up  */
-    left: 900px; /* Move right  */
+    left: 1100px; /* Move right  */
     width: 175px;
     height: 75px;
     border-radius: 50px;
@@ -210,7 +223,7 @@ a.option2_1{
 .option3{
     position: fixed;
     bottom: 5vh;   /* Move up  */
-    left: 1100px;  /* Move right  */
+    left: 1400px;  /* Move right  */
     transform: translateX(-50%); /* Precisely center the box */
     width: 175px;
     height: 75px;
@@ -225,7 +238,7 @@ a.option2_1{
     text-decoration: none;
     color: black;
     white-space: normal; /* Allow wrapping of text */
-    padding: 10px; /* Optional: Add inner spacing */
+    padding: 10px; /* Add inner spacing */
     box-sizing: border-box; /* Ensures padding doesn't break layout */
 
     
@@ -246,6 +259,10 @@ a.option2_1{
     background-color: white;
     border-width: 3px;
 }
+/*
+.option3:active {
+    transform: scale(0.98);
+} */
 
 .option1:active {
     transform: scale(0.98);
@@ -253,9 +270,7 @@ a.option2_1{
 .option2:active {
     transform: scale(0.98);
 }
-.option3:active {
-    transform: scale(0.98);
-}
+
 .wrapper{
     width: 330px;
     padding: 2rem 1rem;
@@ -273,7 +288,7 @@ a.option2_1{
     border: 1px solid white;
     padding: 12px 20px;
     margin-bottom: 10px;
-    margin-top: 50px;
+    margin-top: 35px;
     border-radius: 50px;
     border-color: black;
     border-width: 2px;
@@ -301,6 +316,8 @@ a.option2_1{
 .login_button:active {
     transform: scale(0.98);
 }
+
+
 
 /* Images */
 
@@ -342,7 +359,6 @@ a.option2_1{
 
 /* Text */
 
-
 .title-1{
     position: fixed;
     text-align: center;
@@ -363,30 +379,8 @@ a.option2_1{
     text-align: center;
 }
 
-.text-2{
-    position: fixed;
-    color: white;
-    -webkit-text-stroke: 1px darkred; /* Outline thickness and color */
-    -webkit-text-fill-color: black; /* Inner color of the letter */
-    bottom: 75vh;
-    margin-left: 28vw;
-    margin-right: 30vw;
-    font-size: 25px;
-    text-align: center;
-}
 
-.text-4{
-    position: fixed;
-    color: white;
 
-    -webkit-text-stroke: 1px blue; /* Outline thickness and color */
-    -webkit-text-fill-color: white; /* Inner color of the letter */
-    bottom: 50vh;
-    margin-left: 28vw;
-    margin-right: 30vw;
-    font-size: 20px;
-    text-align: center;
-}
 
 form input{
     align-items: center;
@@ -405,3 +399,7 @@ form input{
 .member{
     margin-top: 15px;
 }
+
+.back{
+    margin-top: 20px;
+}   

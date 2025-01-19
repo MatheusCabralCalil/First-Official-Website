@@ -6,55 +6,81 @@
     
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
 
-    <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    crossorigin="anonymous"
-  />
+  <style>
+     .flash {
+            position: absolute;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            width: 50vw;
+            height: 5vh;
+            text-align: center;
+            left: 25%
+        }
+        .flash-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            width: 50vw;
+            height: 5vh;
+            text-align: center;
+        }
+        .flash-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            width: 50vw;
+            height: 5vh;
+            text-align: center;
+
+        }
+
+        .dismiss-btn {
+            background: none;
+            border: none;
+            color: inherit;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 10px;
+            text-decoration: none;
+            opacity: 0.6;
+            transition: opacity 0.2s ease-in;
+        }
+
+  </style>
 
   <title>{% block title %}Home{% endblock %}</title>
+  
 </head> 
+<body {% block body_style %} style="background-color: black;"{% endblock %}>
 
-<body style="background-color:black;">>
 
+
+<div class="flashes">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+      {% for category, message in messages %}
+      <div class="flash flash-{{ category }}">
+          <span>{{ message }}</span>
+          <button class="dismiss-btn" onclick="this.parentElement.style.display='none';">&times;</button>
+      </div>
+      {% endfor %}
+  {% endif %}
+  {% endwith %}
+</div>
+
+
+{% block logline %}
 <p class="logline">
     You are a detective. You will be investigating cases of murder around the city of Rio De Janeiro. Your main goal is to discover 
     who is the serial killer behind many deaths. One peculiarity the murder has is that he always leaves a riddle behind, leading to 
     more locations and clues, helping you in finding his identity. 
 </p>
+{% endblock %}
 
 
-<div class="flash_message">
-{% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages%}
-      {% for category, message in messages %} 
-      {% if category == 'error' %}
-      <div class="alert alert-danger alter-dismissable fade show" role="alert">
-        {{message}}
-        <button type="button" class="close" data-dismiss="alert"> 
-        <span aria-hidden="true">&times;</span>
-      </button>
-      </div>
-      {% else %}
-      <div class="alert alert-success alert-dismissable fade show" role="alert">
-        {{message}}
-        <button type="button" class="close" data-dismiss="alert"> 
-        <span aria-hidden="true">&times;</span>
-      </button>
-      </div>
-      {% endif %}
-      {% endfor %}
-    {% endif%}
-    {% endwith %}
-</div>
-
-
+{% block website %}
 <div class="website"> 
 
     <a class="play" id="play" href="/home"> Play </a>
@@ -66,27 +92,10 @@
     <a class="logout" id="logout" href="/logout"> Logout </a>
 
 </div> 
+{% endblock %}
 
-<div class="container">{%block content%}{%endblock  %} </div>
-
-
-
-<!-- Bootstrap. Gives appearance -->
-<script
-src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-crossorigin="anonymous"
-></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-crossorigin="anonymous"
-></script>
-<script
-src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-crossorigin="anonymous"
-></script>
+{% block content %}
+{% endblock %}
 
 </body>
 </html>

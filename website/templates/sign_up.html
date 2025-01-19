@@ -1,5 +1,5 @@
 <!--"copy and pase the base.html, allowing me to override"-->
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,26 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
 
 </head>
-<body>
+ -->
+    {% extends "base.html" %}
+
+    {% block title %}Sign Up{% endblock %}
+    
+    {% block content %}
+
+    {% block logline %}
+    <!-- Exclude logline by overriding this block with nothing -->
+    {% endblock %}
+
+    {% block website %}
+
+    {% endblock %}
+
+    {% block body_style %}
+
+    {% endblock %}
+<body style="background-color: white;">
+
 <div class="wrapper">
     <form method="POST"> 
         <h3 class="signup_title" align="center"> Sign up
@@ -37,7 +56,7 @@
         </div>
     
         <div class="form-group">
-            <label for="password1"> Password</label>
+            <label for="password1"> Password </label>
             <input 
             type="password" 
             class="form-control"
@@ -48,7 +67,7 @@
         </div>
     
         <div class="form-group">
-            <label for="password2"> Confirm Password</label>
+            <label for="password2"> Confirm Password </label>
             <input 
             type="password" 
             class="form-control"
@@ -62,12 +81,19 @@
                 Login Here
             </a>
         </div>
+        <div class="back">
+            Do you wish to go back? <a  href="./">
+                Click Here
+            </a>
+        </div>
+
         <br>
             <button type="submit" class="signup_button" class="btn btn-primary"> Sign Up
                 
             </button>
     </form>
 </div>
-    
+
 </body>
-</html>
+ 
+{% endblock %}
