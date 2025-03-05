@@ -12,7 +12,8 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/')
 def home_1():
-    return render_template('base.html')
+    return render_template('index
+    .html')
 
 @auth.route('/logout')
 #makes sure that the user is unable to acess "def lougout" root without being logged in
